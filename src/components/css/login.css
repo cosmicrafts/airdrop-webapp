@@ -1,0 +1,398 @@
+.main-div{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url("../../resources/Centro/Compo40.jpeg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.div-powered{
+    width: 25%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.middle-div{
+    width: 100%;
+    height: 100%;
+}
+
+.img-powered{
+    width: 100%;
+}
+
+.div-logo{
+    width: 100%;
+    position: relative;
+}
+
+.img-logo{
+    position: absolute;
+    width: 16%;
+    right: 0px;
+    margin-top: 5px;
+}
+
+.div-panel{
+    position: relative;
+}
+
+.img-panel{
+    height: 80vh;
+    margin-top: 90px;
+    position: absolute;
+    --w: 50vh;
+    --w2: calc(var(--w) / 2);
+    left: calc(50% - var(--w2));
+}
+
+.img-icon{
+    width: 24vh;
+    margin-top: 13vh;
+    position: absolute;
+    --w: 25vh;
+    --w2: calc(var(--w) / 2);
+    left: calc(50% - var(--w2));
+}
+
+.div-text-login{
+    width: 28vw;
+    margin-top: 37vh;
+    position: absolute;
+    left: 36vw;
+    text-align: center;
+}
+
+.text-login{
+    font-family: 'orbitron';
+    color: #FFFFFF;
+    font-size: 2.5vh;
+    font-weight: 800;
+}
+
+.div-plug{
+    height: 15vh;
+    width: 15vh;
+    margin-top: 45vh;
+    position: absolute;
+    cursor: pointer;
+    --w: 30vh;
+    --w2: calc(var(--w) / 2);
+    left: calc(50% - var(--w2));
+}
+
+.img-bkg{
+    width: 100%;
+    height: 100%;
+    background-image: url("../../resources/Centro/Marco\ de\ logos.png");
+    background-size: cover;
+    text-align: center;
+}
+
+.img-plug{
+    width: 35%;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+
+.txt-wallet{
+    font-size: 2vh;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'orbitron';
+}
+
+.div-stoic{
+    height: 15vh;
+    width: 15vh;
+    margin-top: 45vh;
+    position: absolute;
+    left: 50vw;
+    cursor: pointer;
+}
+
+.img-stoic{
+    width: 50%;
+    margin-left: 8px;
+    margin-top: 25px;
+}
+
+.div-earth{
+    height: 15vh;
+    width: 15vh;
+    margin-top: 61vh;
+    position: absolute;
+    cursor: pointer;
+    --w: 30vh;
+    --w2: calc(var(--w) / 2);
+    left: calc(50% - var(--w2));
+}
+
+.img-earth{
+    width: 50%;
+    margin-left: 8px;
+    margin-top: 25px;
+}
+
+.div-ic{
+    height: 15vh;
+    width: 15vh;
+    margin-top: 61vh;
+    position: absolute;
+    left: 50vw;
+    cursor: pointer;
+}
+
+.img-ic{
+    width: 50%;
+    margin-left: 8px;
+    margin-top: 25px;
+}
+
+.btn-link{
+    display: block;
+    cursor: pointer;
+}
+
+.div-wou{
+    position: absolute;
+    bottom: 0;
+    width: 6%;
+    --w: 9vh;
+    --w2: calc(var(--w) / 2);
+    left: calc(50% - var(--w2));
+}
+.img-wou{
+    width: 100%;
+}
+
+.div-airdrop{
+    position: absolute;
+    top: calc(77vh + 90px);
+    width: 100%;
+    text-align: center;
+}
+
+.txt-airdrop{
+    color: #FFFFFF;
+    font-family: 'orbitron';
+}
+
+.div-condition{
+    position: absolute;
+    top: 80vh;
+    width: 100%;
+    text-align: center;
+}
+
+.txt-condition{
+    color: #FFFFFF;
+    font-family: 'orbitron';
+    font-size: 0.82vh;
+}
+
+@media(max-width: 280px) {
+    .div-plug {
+        width: 12vh;
+        height: 12vh;
+    }
+    .div-stoic{
+        left: 50vw;
+        width: 12vh;
+        height: 12vh;
+    }
+    .div-earth{
+        width: 12vh;
+        height: 12vh;
+    }
+    .div-ic{
+        left: 50vw;
+        width: 12vh;
+        height: 12vh;
+    }
+    .img-plug{
+        margin-top: 12px
+    }
+    .img-stoic{
+        margin-top: 12px
+    }
+    .img-earth{
+        margin-top: 12px
+    }
+    .img-ic{
+        margin-top: 12px
+    }
+    .txt-wallet{
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 375px){
+    .div-powered {
+        width: 50%;
+    }
+    .img-logo {
+        width: 35%;
+        right: 5px;
+    }
+    .img-panel {
+        width: 90vw;
+        margin-top: 90px;
+        left: 5vw;
+    }
+    .div-text-login{
+        width: 70vw;
+        left: 15vw;
+    }
+    .div-plug{
+        margin-top: 48vh;
+    }
+    .div-stoic{
+        margin-top: 48vh;
+    }
+    .div-earth{
+        margin-top: 65vh;
+    }
+    .div-ic{
+        margin-top: 65vh;
+    }
+    .div-wou{
+        width: 15%;
+    }
+    .div-condition{
+        top: 82vh;
+        width: 65vw;
+        left: 18vw;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 414px){
+    .div-powered {
+        width: 50%;
+    }
+    .img-logo {
+        width: 35%;
+        right: 5px;
+    }
+    .img-panel {
+        width: 90vw;
+        margin-top: 90px;
+        left: 5vw;
+    }
+    .div-text-login {
+        margin-top: 33vh;
+        left: 12vw;
+        width: 315px;
+    }
+    .div-plug {
+        height: 14vh;
+        width: 14vh;
+        margin-top: 44vh;
+    }
+    .div-stoic {
+        height: 14vh;
+        width: 14vh;
+        margin-top: 44vh;
+    }
+    .div-earth {
+        height: 14vh;
+        width: 14vh;
+        margin-top: 63vh;
+    }
+    .div-ic {
+        height: 14vh;
+        width: 14vh;
+        margin-top: 63vh;
+    }
+    .div-wou{
+        width: 15%;
+        left: 2vw;
+    }
+    .div-condition{
+        top: 80vh;
+        width: 65vw;
+        left: 18vw;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 540px){
+    .div-powered {
+        width: 45%;
+    }
+    .img-logo {
+        width: 30%;
+        right: 5px;
+    }
+    .div-text-login {
+        width: 48vw;
+        left: 26vw;
+    }
+    .div-wou{
+        width: 15%;
+        left: 2vw;
+    }
+    .div-condition{
+        top: 82vh;
+        width: 65vw;
+        left: 18vw;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 912px){
+    .div-text-login{
+        width: 50vw;
+        left: 25vw;
+    }
+    .div-plug{
+        margin-top: 45vh;
+    }
+    .img-plug{
+        width: 40%;
+    }
+    .txt-wallet {
+        white-space: nowrap;
+    }
+    .div-stoic{
+        margin-top: 45vh;
+    }
+    .img-stoic {
+        width: 57%;
+        margin-top: 17px;
+    }
+    .div-earth {
+        margin-top: 63vh;
+    }
+    .img-earth {
+        margin-top: 30px;
+    }
+    .div-ic {
+        margin-top: 63vh;
+    }
+    .img-ic{
+        width: 57%;
+    }
+    .div-wou{
+        left: 0;
+        width: 20%;
+    }
+}
+
+@media (min-width: 913px) and (max-width: 1024px){
+    
+}
+
+@media (min-width: 1025px) and (max-width: 1280px){
+    
+}
+
+@media (min-width: 1281px) and (max-width: 1600px){
+    
+}
+
+@media (min-width: 2560px){
+    
+}

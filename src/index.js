@@ -1,17 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import {Router, Route, Switch} from 'react-router-dom'
+import {createBrowserHistory} from "history";
+import AppProvider from "./context";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Login } from './components/login/Login';
+import { IncorrectWallet } from './components/login/IncorrectWallet';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+var hist = createBrowserHistory();
+
+document.title = "Cosmicrafts Airdrop";
+
+render(
+  <AppProvider>
+    <Router history={hist}>
+      <Switch>
+        {/*<Route path="/.well-known/nftanvil.json" component={NFTAnvil}></Route>*/}
+        <Route path="/IncorrectWallet" component={IncorrectWallet}></Route>
+        <Route path="/" component={Login}></Route>
+      </Switch>
+    </Router>
+  </AppProvider>, 
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
