@@ -1,70 +1,125 @@
+
 .main-div{
     height: 100%;
     width: 100%;
     position: absolute;
-    background: url("../../resources/Centro/Compo40.jpeg") no-repeat center center fixed; 
+    background: url("../../resources/design/background_full.svg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
-.div-powered{
-    width: 25%;
-    position: absolute;
-    top: 5px;
-    left: 5px;
+.header-main-div{
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: #ebebeb33;
+    transition: all 400ms;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 12px 0 11px;
+    overflow: visible;
+    position: absolute!important;
+    background-color: transparent!important;
+    z-index: 99;
+    width: 100%;
 }
-
-.middle-div{
+.header-inner-div{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.header-left-div{
+    width: 15%;
+}
+.header-left-img-div{
+    text-align: left;
+    width: 30%;
+    max-width: 30%;
+}
+.header-img-logo{
     width: 100%;
     height: 100%;
 }
 
-.img-powered{
-    width: 100%;
+.header-middle-div{
+    width: 70%;
+    display: block;
 }
 
-.div-logo{
-    width: 100%;
-    position: relative;
+.header-links-div{
+    text-align: center;
 }
-
-.img-logo{
+.header-li{
+    display: inline-block;
+    padding: 0px 15px;
+}
+.header-link{
+    text-decoration: none;
+    font-family: "Inter";
+    font-size: 2.25vh;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 400ms;
+}
+.header-link:hover{
+    color: #5142FC;
+}
+/*FOOTER*/
+.join-discord-div{
     position: absolute;
-    width: 16%;
-    right: 0px;
-    margin-top: 5px;
+    width: 200px;
+    bottom: 6vh;
+    right: 2.5vw;
+    cursor: pointer;
+    z-index: 3;
 }
-
+.join-discord-img{
+    width: 100%;
+}
+/*PANEL*/
 .div-panel{
     position: relative;
+    margin-top: 90px;
+    --w: 50vh;
+    --w2: calc(var(--w) / 2);
+    margin-left: calc(50% - var(--w2));
 }
 
 .img-panel{
     height: 80vh;
-    margin-top: 90px;
     position: absolute;
-    --w: 50vh;
-    --w2: calc(var(--w) / 2);
-    left: calc(50% - var(--w2));
+    z-index: 1;
 }
 
 .img-icon{
     width: 24vh;
-    margin-top: 13vh;
+    margin-top: 3vh;
     position: absolute;
-    --w: 25vh;
+    z-index: 1;
+    --w: 80vh;
     --w2: calc(var(--w) / 2);
-    left: calc(50% - var(--w2));
+    left: calc(52.5vh - var(--w2));
+}
+
+.img-icon-ic{
+    width: 8vh;
+    margin-top: 23vh;
+    position: absolute;
+    z-index: 1;
+    --w: 80vh;
+    --w2: calc(var(--w) / 2);
+    left: calc(61vh - var(--w2));
 }
 
 .div-text-login{
-    width: 28vw;
-    margin-top: 37vh;
+    width: 36vh;
+    margin-top: 30vh;
     position: absolute;
-    left: 36vw;
+    left: 7vh;
     text-align: center;
+    z-index: 1;
 }
 
 .text-login{
@@ -72,88 +127,1022 @@
     color: #FFFFFF;
     font-size: 2.5vh;
     font-weight: 800;
+    z-index: 1;
 }
 
-.div-plug{
-    height: 15vh;
-    width: 15vh;
-    margin-top: 45vh;
+.div-inner-panel{
+    position: absolute;
+    background-image: url("../../resources/design/panel.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 37vh;
+    width: 26.2vh;
+    height: 34.75vh;
+    left: 12vh;
+    z-index: 1;
+}
+
+.div-wallet{
+    width: 80%;
+    height: 5.25vh;
     position: absolute;
     cursor: pointer;
-    --w: 30vh;
-    --w2: calc(var(--w) / 2);
-    left: calc(50% - var(--w2));
+    left: 10%;
+    z-index: 1;
 }
 
 .img-bkg{
     width: 100%;
     height: 100%;
-    background-image: url("../../resources/Centro/Marco\ de\ logos.png");
-    background-size: cover;
-    text-align: center;
+    background-image: url("../../resources/design/box_unselected.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
-
-.img-plug{
-    width: 35%;
-    margin-top: 25px;
-    margin-left: 5px;
+.img-bkg:hover{
+    background-image: url("../../resources/design/box_hover.svg");
 }
-
 .txt-wallet{
-    font-size: 2vh;
+    font-size: 1.7vh;
     color: #FFFFFF;
-    display: block;
-    font-family: 'orbitron';
+    display: inline-block;
+    font-family: 'Inter';
+    vertical-align: super;
+    margin-left: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.div-plug{
+    margin-top: 2.5vh;
+    z-index: 1;
+}
+.img-plug{
+    width: 10%;
+    margin-top: 8px;
+    margin-left: 15px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .div-stoic{
-    height: 15vh;
-    width: 15vh;
-    margin-top: 45vh;
-    position: absolute;
-    left: 50vw;
-    cursor: pointer;
+    margin-top: 9.5vh;
+    z-index: 1;
 }
 
 .img-stoic{
-    width: 50%;
-    margin-left: 8px;
-    margin-top: 25px;
+    width: 15%;
+    margin-left: 10px;
+    margin-top: 9px;
+    z-index: 1;
 }
 
 .div-earth{
-    height: 15vh;
-    width: 15vh;
-    margin-top: 61vh;
-    position: absolute;
-    cursor: pointer;
-    --w: 30vh;
-    --w2: calc(var(--w) / 2);
-    left: calc(50% - var(--w2));
+    margin-top: 16.5vh;
+    z-index: 1;
 }
 
 .img-earth{
-    width: 50%;
-    margin-left: 8px;
-    margin-top: 25px;
+    width: 15%;
+    margin-left: 10px;
+    margin-top: 8px;
+    z-index: 1;
 }
 
 .div-ic{
-    height: 15vh;
-    width: 15vh;
-    margin-top: 61vh;
-    position: absolute;
-    left: 50vw;
-    cursor: pointer;
+    margin-top: 23.5vh;
+    z-index: 1;
 }
 
 .img-ic{
-    width: 50%;
-    margin-left: 8px;
-    margin-top: 25px;
+    width: 15%;
+    margin-left: 10px;
+    margin-top: 8px;
+    z-index: 1;
 }
 
-.btn-link{
+.div-airdrop{
+    position: absolute;
+    top: calc(64vh + 90px);
+    text-align: center;
+    left: 21vh;
+    z-index: 1;
+}
+.txt-airdrop{
+    color: #FFFFFF;
+    font-family: 'orbitron';
+    font-size: 1.75vh;
+    z-index: 1;
+}
+
+.div-condition{
+    position: absolute;
+    top: 66vh;
+    text-align: center;
+    left: 15vh;
+    width: 21vh;
+    z-index: 1;
+}
+.txt-condition{
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-size: 0.82vh;
+    z-index: 1;
+}
+
+.div-left-background{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40vw;
+}
+.img-left-background{
+    width: 100%;
+}
+
+.div-right-background{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40vw;
+}
+.img-right-background{
+    width: 100%;
+}
+
+/*GENESIS*/
+.txt-genesis-title{
+    display: block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.75vw;
+    text-transform: capitalize;
+    -webkit-text-stroke-width: 2px;
+    stroke-width: 2px;
+    -webkit-text-stroke-color: #f738fb;
+    stroke: #f738fb;
+    -webkit-text-fill-color: #02010100;
+    text-shadow: 0px 2px 6px #f738fb;
+    line-height: 10vh;
+    /*
+    color: var( --e-global-color-378af7c );
+    -webkit-text-stroke-width: 2px;
+    stroke-width: 2px;
+    -webkit-text-stroke-color: var( --e-global-color-7bf3654 );
+    stroke: var( --e-global-color-7bf3654 );
+    
+    */
+}
+
+.txt-congrat{
+    font-size: 3.6vw;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    position: absolute;
+    left: 10.17vw;
+    top: 18vh;
+    font-weight: 800;
+    width: 39.55vw;
+}
+
+.span-three{
+    color: #F738FB;
+}
+
+.img-ship-genesis{
+    position: absolute;
+    left: 50.85vw;
+    width: 45.2vw;
+    top: 13vh;
+    z-index: 2;
+}
+.img-ship-genesis-back{
+    position: absolute;
+    left: 50.85vw;
+    width: 45.2vw;
+    top: 13vh;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.btn-airdrop{
+    background-image: url("../../resources/design/box_unselected.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    width: 12.5vw;
+    height: 3.2vw;
+    top: 46.9vh;
+}
+.btn-airdrop:hover{
+    background-image: url("../../resources/design/box_hover.svg");
+}
+.first-airdrop{
+    left: 10.17vw;
+}
+
+.second-airdrop{
+    left: 24vw;
+}
+
+.third-airdrop{
+    left: 37.5vw;
+}
+
+.airdrop-icon{
+    height: 60%;
+    position: absolute;
+    left: 1vh;
+    top: 20%;
+    cursor: pointer;
+}
+
+.lbl-airdrop{
+    color: #FFFFFF;
+    position: absolute;
+    left: 3.5vw;
+    top: 0.75vw;
+    font-size: 1.15vw;
+    cursor: pointer;
+}
+
+.img-genesis-mid{
+    position: absolute;
+    left: 20.96vw;
+    top: 52.04vh;
+    width: 17.98vw;
+    z-index: 2;
+}
+
+.txt-keep{
+    position: absolute;
+    left: 10.17vw;
+    color: #FFFFFF;
+    font-size: 2vw;
+    bottom: 7vh;
+    width: 40vw;
+    line-height: 2.5vw;
+}
+
+.txt-keep-mobile-1{
+    display: none;
+}
+.txt-keep-mobile-2{
+    display: none;
+}
+
+.img-rocket-icon{
+    position: absolute;
+    left: 44vw;
+    bottom: 7vh;
+    color: #FFFFFF;
+    width: 2vw;
+}
+
+/*FAILED*/
+.img-ship-break{
+    z-index: 2;
+    position: absolute;
+    width: 36vh;
+    top: 25vh;
+    left: 7vh;
+}
+
+.img-cross{
+    z-index: 2;
+    position: absolute;
+    width: 7vh;
+    top: 52vh;
+    left: 21.5vh;
+}
+
+.txt-no-valid{
+    z-index: 2;
+    position: absolute;
+    width: 36vh;
+    top: 63vh;
+    left: 7vh;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-size: 1.2vh;
+    text-align: center;
+    font-weight: 700;
+}
+
+.div-new-wallet{
+    width: 20vh;
+    left: 15vh;
+    position: absolute;
+    top: 68vh;
+    height: 5.09vh;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.img-wallet-icon{
+    height: 60%;
+    position: absolute;
+    left: 1vh;
+    top: 20%;
+    cursor: pointer;
+}
+
+.txt-new-wallet{
+    color: #FFFFFF;
+    width: 70%;
+    text-align: left;
+    position: absolute;
+    left: 6vh;
+    font-size: 1.8vh;
+    top: 5%;
+    cursor: pointer;
+}
+
+/*RESPONSIVE 280*/
+@media(max-width: 280px) {
+    .header-middle-div{
+        display: none;
+    }
+    .header-left-div {
+        width: 25%;
+        margin-left: 46%;
+    }
+    .join-discord-div{
+        width: 40vw;
+    }
+    /*Login*/
+    .img-panel{
+        width: 90vw;
+        left: 5vw;
+    }
+    .img-icon{
+        width: 40vw;
+        margin-top: 10vh;
+    }
+    .img-icon-ic{
+        width: 14vw;
+        left: 43vw;
+    }
+    .div-text-login{
+        width: 100vw;
+        left: 0;
+        margin-top: 27vh;
+    }
+    .text-login{
+        font-size: 1.5vh;
+    }
+    .div-inner-panel{
+        width: 50vw;
+        left: 25vw;
+        margin-top: 34vh;
+    }
+    .img-ic{
+        margin-left: 5px;
+    }
+    .txt-wallet{
+        font-size: 1.5vh;
+        margin-left: 5px;
+    }
+    .div-condition{
+        width: 100vw;
+        left: 0;
+        top: 61vh;
+    }
+    .div-airdrop{
+        width: 100vw;
+        left: 0;
+        top: 67vh;
+    }
+    /*Genesis*/
+    .txt-congrat{
+        width: 85vw;
+        left: 5vw;
+        top: 7vh;
+        font-size: 4vh;
+    }
+    .txt-genesis-title{
+        font-size: 9vw;
+        white-space: nowrap;
+    }
+    .img-genesis-mid{
+        width: 65vw;
+        top: 32vh;
+        left: auto;
+        right: 0vw;
+    }
+    .lbl-airdrop{
+        font-size: 4vw;
+        left: 12vw;
+        top: 1.3vh;
+    }
+    .first-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 38vh;
+    }
+    .second-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 44vh;
+    }
+    .third-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 50vh;
+    }
+    .img-ship-genesis{
+        top: 53vh;
+        left: 5vw;
+        width: 86vw;
+    }
+    .img-ship-genesis-back{
+        top: 59vh;
+        left: 16vw;
+        width: 70vw;
+    }
+    .txt-keep{
+        display: none;
+    }
+    .txt-keep-mobile-1{
+        display: block;
+        position: absolute;
+        color: #FFFFFF;
+        line-height: 2.5vw;
+        top: 33vh;
+        bottom: auto;
+        left: 5vw;
+        width: 90vw;
+        font-size: 4vw;
+    }
+    .txt-keep-mobile-2{
+        display: block;
+        position: absolute;
+        left: 5vw;
+        color: #FFFFFF;
+        font-size: 3vw;
+        bottom: 3.5vh;
+        width: 90vw;
+        line-height: 2.5vw;
+    }
+    .img-rocket-icon{
+        left: 63vw;
+        width: 5vw;
+        bottom: 3vh;
+    }
+    /*FAILDED*/
+    .div-panel{
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .img-ship-break{
+        width: 66vw;
+        left: 17vw;
+    }
+    .img-cross{
+        width: 12vw;
+        left: 44vw;
+        top: 48vh;
+    }
+    .txt-no-valid{
+        width: 100vw;
+        left: 0;
+        font-size: 2vw;
+        top: 58vh;
+    }
+    .div-new-wallet{
+        width: 46vw;
+        left: 28vw;
+        top: 61vh;
+    }
+}
+
+/*RESPONSIVE 375*/
+@media(min-width: 281px) and (max-width: 375px) {
+    .header-middle-div{
+        display: none;
+    }
+    .header-left-div {
+        width: 25%;
+        margin-left: 46%;
+    }
+    .join-discord-div{
+        width: 35vw;
+    }
+    /*Login*/
+    .img-panel{
+        width: 90vw;
+        left: 5vw;
+        top: 40px;
+        height: auto;
+    }
+    .div-panel{
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+    .img-icon{
+        left: 30vw;
+        width: 40vw;
+        top: 40px;
+    }
+    .img-icon-ic{
+        margin-top: 185px;
+        left: 45vw;
+        width: 10vw;
+    }
+    .div-text-login{
+        margin-top: 220px;
+        width: 66vw;
+        left: 17vw;
+    }
+    .text-login{
+        font-size: 1.5vh;
+    }
+    .div-inner-panel{
+        margin-top: 265px;
+        width: 52vw;
+        left: 24vw;
+        height: 100vh;
+    }
+    .div-condition{
+        top: 470px;
+        left: 0;
+        width: 100%;
+    }
+    .div-airdrop{
+        top: calc(53vw + 53vh);
+        width: 100vw;
+        left: 0;
+        text-align: center;
+    }
+    .div-plug{
+        z-index: 1;
+        height: auto;
+        width: auto;
+        left: 15%;
+    }
+    .div-stoic{
+        z-index: 1;
+        height: auto;
+        width: auto;
+        left: 15%;
+    }
+    .div-earth{
+        z-index: 1;
+        height: auto;
+        width: auto;
+        left: 15%;
+    }
+    .div-ic{
+        z-index: 1;
+        height: auto;
+        width: auto;
+        left: 15%;
+    }
+    /*Genesis*/
+    .txt-congrat{
+        width: 85vw;
+        left: 5vw;
+        top: 7vh;
+        font-size: 5vh;
+    }
+    .txt-genesis-title{
+        font-size: 9vw;
+        white-space: nowrap;
+    }
+    .img-genesis-mid{
+        width: 55vw;
+        top: 34vh;
+        left: auto;
+        right: 15vw;
+    }
+    .lbl-airdrop{
+        font-size: 3vw;
+        left: 10vw;
+        top: 1.4vh;
+    }
+    .first-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 41vh;
+    }
+    .second-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 47vh;
+    }
+    .third-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 53vh;
+    }
+    .img-ship-genesis{
+        top: 53vh;
+        left: 5vw;
+        width: 86vw;
+    }
+    .img-ship-genesis-back{
+        top: 59vh;
+        left: 16vw;
+        width: 70vw;
+    }
+    .txt-keep{
+        display: none;
+    }
+    .txt-keep-mobile-1{
+        display: block;
+        position: absolute;
+        color: #FFFFFF;
+        line-height: 2.5vw;
+        top: 37vh;
+        bottom: auto;
+        left: 5vw;
+        width: 90vw;
+        font-size: 4vw;
+    }
+    .txt-keep-mobile-2{
+        display: block;
+        position: absolute;
+        left: 5vw;
+        color: #FFFFFF;
+        font-size: 3vw;
+        bottom: 3.5vh;
+        width: 90vw;
+        line-height: 2.5vw;
+    }
+    .img-rocket-icon{
+        left: 62vw;
+        width: 5vw;
+        bottom: 2.5vh;
+    }
+    /*FAILED*/
+    .img-ship-break{
+        width: 66vw;
+        left: 17vw;
+    }
+    .img-cross{
+        width: 12vw;
+        left: 44vw;
+        top: 370px;
+    }
+    .txt-no-valid{
+        width: 100vw;
+        left: 0;
+        font-size: 2vw;
+        top: 430px;
+    }
+    .div-new-wallet{
+        width: 150px;
+        left: 30vw;
+        top: 470px;
+        height: 38px;
+    }
+    .div-panel{
+        margin-left: 0px;
+    }
+}
+
+/*RESPONSIVE 414*/
+@media (min-width: 376px) and (max-width: 414px){
+    .header-middle-div{
+        display: none;
+    }
+    .middle-div{
+        height: auto;
+    }
+    .join-discord-div{
+        width: 35vw;
+    }
+    /*Login*/
+    .img-panel{
+        width: 90vw;
+        left: 5vw;
+    }
+    .img-icon{
+        left: 30vw;
+        width: 40vw;
+        top: 6vh;
+    }
+    .img-icon-ic{
+        margin-top: 23.5vh;
+        width: 12vw;
+        left: 45vw;
+    }
+    .div-text-login{
+        margin-top: 28vh;
+        width: 100vw;
+        left: 0; 
+    }
+    .text-login{
+        font-size: 1.5vh;
+    }
+    .div-inner-panel{
+        margin-top: 33vh;
+        width: 50vw;
+        left: 25vw;
+    }
+    .div-condition{
+        top: 63vh;
+        width: 100vw;
+        left: 0;
+    }
+    .div-airdrop{
+        top: calc(60vh + 90px);
+    }
+    /*Genesis*/
+    .header-left-div {
+        width: 25%;
+        margin-left: 46%;
+    }
+    .txt-congrat{
+        width: 85vw;
+        left: 5vw;
+        top: 7vh;
+        font-size: 5vh;
+    }
+    .txt-genesis-title{
+        font-size: 8.5vw;
+        white-space: nowrap;
+    }
+    .img-genesis-mid{
+        width: 55vw;
+        top: 37vh;
+        left: auto;
+        right: 7vw;
+    }
+    .lbl-airdrop{
+        font-size: 4vw;
+        left: 11vw;
+        top: 1.4vh;
+    }
+    .first-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 41vh;
+    }
+    .second-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 47vh;
+    }
+    .third-airdrop{
+        width: 45vw;
+        height: 5vh;
+        left: 5vw;
+        top: 53vh;
+    }
+    .img-ship-genesis{
+        top: 55vh;
+        left: 5vw;
+        width: 86vw;
+    }
+    .img-ship-genesis-back{
+        top: 61vh;
+        left: 16vw;
+        width: 70vw;
+    }
+    .txt-keep{
+        display: none;
+    }
+    .txt-keep-mobile-1{
+        display: block;
+        position: absolute;
+        color: #FFFFFF;
+        line-height: 2.5vw;
+        top: 37vh;
+        bottom: auto;
+        left: 5vw;
+        width: 90vw;
+        font-size: 4vw;
+    }
+    .txt-keep-mobile-2{
+        display: block;
+        position: absolute;
+        left: 5vw;
+        color: #FFFFFF;
+        font-size: 3vw;
+        bottom: 3.5vh;
+        width: 90vw;
+        line-height: 2.5vw;
+    }
+    .img-rocket-icon{
+        left: 62vw;
+        width: 5vw;
+        bottom: 2.5vh;
+    }
+    /*FAILED*/
+    .img-ship-break{
+        width: 66vw;
+        left: 17vw;
+    }
+    .img-cross{
+        width: 12vw;
+        left: 44vw;
+        top: 48vh;
+    }
+    .txt-no-valid{
+        width: 100vw;
+        left: 0;
+        font-size: 2vw;
+        top: 58vh;
+    }
+    .div-new-wallet{
+        width: 42vw;
+        left: 28vw;
+        top: 62vh;
+    }
+    .div-panel{
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 540px){
+    .header-middle-div{
+        display: none;
+    }
+    .header-left-div {
+        width: 25%;
+        margin-left: 46%;
+    }
+    .txt-congrat{
+        width: 65vw;
+        left: 5vw;
+        top: 7vh;
+        font-size: 5vh;
+    }
+    .txt-genesis-title{
+        font-size: 8vw;
+        white-space: nowrap;
+    }
+    .img-genesis-mid{
+        width: 45vw;
+        top: 10vh;
+        left: auto;
+        right: 7vw;
+    }
+    .lbl-airdrop{
+        font-size: 2.5vw;
+        left: 7vw;
+        top: 1.4vh;
+    }
+    .first-airdrop{
+        width: 26vw;
+        height: 5vh;
+        left: 5vw;
+        top: 41vh;
+    }
+    .second-airdrop{
+        width: 26vw;
+        height: 5vh;
+        left: 36vw;
+        top: 41vh;
+    }
+    .third-airdrop{
+        width: 26vw;
+        height: 5vh;
+        left: 67vw;
+        top: 41vh;
+    }
+    .img-ship-genesis{
+        top: 41vh;
+        left: 12.5vw;
+        width: 75vw;
+    }
+    .img-ship-genesis-back{
+        top: 49vh;
+        left: 23vw;
+        width: 60vw;
+    }
+    .txt-keep{
+        display: none;
+    }
+    .txt-keep-mobile-1{
+        display: block;
+        position: absolute;
+        color: #FFFFFF;
+        line-height: 2.5vw;
+        top: 37vh;
+        bottom: auto;
+        left: 5vw;
+        width: 90vw;
+        font-size: 3vw;
+    }
+    .txt-keep-mobile-2{
+        display: block;
+        position: absolute;
+        left: 5vw;
+        color: #FFFFFF;
+        font-size: 3vw;
+        bottom: 3.5vh;
+        width: 90vw;
+        line-height: 2.5vw;
+    }
+    .img-rocket-icon{
+        left: 58vw;
+        width: 5vw;
+        bottom: 2.5vh;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 912px){
+    .header-middle-div{
+        display: none;
+    }
+    .header-left-div {
+        width: 25%;
+        margin-left: 46%;
+    }
+    .txt-congrat{
+        width: 65vw;
+        left: 5vw;
+        top: 7vh;
+        font-size: 5vh;
+    }
+    .txt-genesis-title{
+        font-size: 8vw;
+        white-space: nowrap;
+    }
+    .img-genesis-mid{
+        width: 45vw;
+        top: 10vh;
+        left: auto;
+        right: 7vw;
+    }
+    .lbl-airdrop{
+        font-size: 2.5vw;
+        left: 7vw;
+        top: 1.4vh;
+    }
+    .first-airdrop{
+        width: 26vw;
+        height: 5vh;
+        left: 5vw;
+        top: 41vh;
+    }
+    .second-airdrop{
+        width: 26vw;
+        height: 5vh;
+        left: 36vw;
+        top: 41vh;
+    }
+    .third-airdrop{
+        width: 26vw;
+        height: 5vh;
+        left: 67vw;
+        top: 41vh;
+    }
+    .img-ship-genesis{
+        top: 41vh;
+        left: 12.5vw;
+        width: 75vw;
+    }
+    .img-ship-genesis-back{
+        top: 49vh;
+        left: 23vw;
+        width: 60vw;
+    }
+    .txt-keep{
+        display: none;
+    }
+    .txt-keep-mobile-1{
+        display: block;
+        position: absolute;
+        color: #FFFFFF;
+        line-height: 2.5vw;
+        top: 37vh;
+        bottom: auto;
+        left: 5vw;
+        width: 90vw;
+        font-size: 3vw;
+    }
+    .txt-keep-mobile-2{
+        display: block;
+        position: absolute;
+        left: 5vw;
+        color: #FFFFFF;
+        font-size: 3vw;
+        bottom: 3.5vh;
+        width: 90vw;
+        line-height: 2.5vw;
+    }
+    .img-rocket-icon{
+        left: 58vw;
+        width: 5vw;
+        bottom: 2.5vh;
+    }
+}
+
+/*.btn-link{
     display: block;
     cursor: pointer;
 }
@@ -169,32 +1158,9 @@
 .img-wou{
     width: 100%;
 }
+*/
 
-.div-airdrop{
-    position: absolute;
-    top: calc(77vh + 90px);
-    width: 100%;
-    text-align: center;
-}
-
-.txt-airdrop{
-    color: #FFFFFF;
-    font-family: 'orbitron';
-}
-
-.div-condition{
-    position: absolute;
-    top: 80vh;
-    width: 100%;
-    text-align: center;
-}
-
-.txt-condition{
-    color: #FFFFFF;
-    font-family: 'orbitron';
-    font-size: 0.82vh;
-}
-
+/*
 @media(max-width: 280px) {
     .div-plug {
         width: 12vh;
@@ -396,3 +1362,4 @@
 @media (min-width: 2560px){
     
 }
+*/

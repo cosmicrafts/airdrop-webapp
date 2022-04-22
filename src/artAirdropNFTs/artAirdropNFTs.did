@@ -1,0 +1,10 @@
+type Data = 
+ record {
+   address: text;
+   genesis: bool;
+   link: text;
+   valid: bool;
+ };
+service : {
+  getData: (text) -> (Data) query;
+}
