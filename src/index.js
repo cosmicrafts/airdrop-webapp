@@ -5,7 +5,6 @@ import {createBrowserHistory} from "history";
 import AppProvider from "./context";
 import './index.css';
 import { Login } from './components/login/Login';
-import { IncorrectWallet } from './components/login/IncorrectWallet';
 
 var hist = createBrowserHistory();
 
@@ -15,8 +14,6 @@ render(
   <AppProvider>
     <Router history={hist}>
       <Switch>
-        {/*<Route path="/.well-known/nftanvil.json" component={NFTAnvil}></Route>*/}
-        <Route path="/IncorrectWallet" component={IncorrectWallet}></Route>
         <Route path="/" component={Login}></Route>
       </Switch>
     </Router>

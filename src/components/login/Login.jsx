@@ -45,6 +45,7 @@ const Login = (props) => {
     const [logged, setLogged] = useState(false);
     const [wallet, setWallet] = useState("");
     const [gen, setGen] = useState(false);
+    const [genList, setGenList] = useState([]);
 
     const connectWallet = async (pWallet) => {
         switch(pWallet) {
@@ -116,15 +117,21 @@ const Login = (props) => {
         setLogged(false);
         if(_d.genesis === true){
           setGen(true);
+          let _l = _d.link.split(",");
+          setGenList(_l);
         } else {
           setGen(false);
-          //window.open("https://google.com");
+          window.location.href = _d.link;
         }
       } else {
         setLogged(true);
         setGen(false);
       }
     };
+
+    const redeemGenesis = (ind) => {
+      window.open(genList[ind]);
+    }
 
     const newAuthII = async () => {
         const authClient = await AuthClient.create();
@@ -221,15 +228,15 @@ const Login = (props) => {
               <label className='txt-congrat'><span className='txt-genesis-title'>Genesis CrowdFunder</span>Congratulations, you earned <span className='span-three'>3</span> Airdrop NFTs!</label>
               <img src={ship_genesis} alt='ship' className='img-ship-genesis' />
               <img src={background_logo} alt='ship genesis image' className='img-ship-genesis-back' />
-              <div className='btn-airdrop first-airdrop'>
+              <div className='btn-airdrop first-airdrop' onClick={() => { redeemGenesis(0); }}>
                 <img src={airdrop_icon} alt='airdrop icon' className='airdrop-icon' />
                 <label className='lbl-airdrop'>Claim 1st NFT</label>
               </div>
-              <div className='btn-airdrop second-airdrop'>
+              <div className='btn-airdrop second-airdrop' onClick={() => { redeemGenesis(1); }}>
                 <img src={airdrop_icon} alt='airdrop icon' className='airdrop-icon' />
                 <label className='lbl-airdrop'>Claim 2nd NFT</label>
               </div>
-              <div className='btn-airdrop third-airdrop'>
+              <div className='btn-airdrop third-airdrop' onClick={() => { redeemGenesis(2); }}>
                 <img src={airdrop_icon} alt='airdrop icon' className='airdrop-icon' />
                 <label className='lbl-airdrop'>Claim 3rd NFT</label>
               </div>
