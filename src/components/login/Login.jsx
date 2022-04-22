@@ -4,11 +4,11 @@ import { idlFactory } from "../../artAirdropNFTs/artAirdropNFTs.did.js";
 
 import "../css/login.css";
 import powered from "../../resources/powered.dark.svg";
-import icon from "../../resources/Centro/icon.png";
-import plug from "../../resources/Centro/PLUG.png";
-import stoic from "../../resources/Centro/stoic.png";
-import earth from "../../resources/Centro/earth.png";
-import ic from "../../resources/Centro/dfinity.png";
+import icon from "../../resources/design/logo.svg";
+import plug from "../../resources/design/plug.svg";
+import stoic from "../../resources/design/stoic.svg";
+import earth from "../../resources/design/earth.svg";
+import ic from "../../resources/design/dfinity.svg";
 
 import background from "../../resources/design/background.svg";
 import leftbackground from "../../resources/design/leftship_background.svg";
