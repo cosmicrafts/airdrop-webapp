@@ -220,6 +220,15 @@ const Login = (props) => {
                 <label className='txt-airdrop'>AIRDROP</label>
               </div>
             </div>
+            <div className='div-left-background'>
+              <img src={leftbackground} className='img-left-background' />
+            </div>
+            <div className='div-right-background'>
+              <img src={rightbackground} className='img-right-background' />
+            </div>
+            <div className='div-powered'>
+              <img src={powered} alt='Powered by Internet Computer' className='img-powered' />
+            </div>
           </div>
           :
           gen === true ?

@@ -460,6 +460,17 @@
     cursor: pointer;
 }
 
+.div-powered{
+    display: block;
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+    width: 22vw;
+}
+.img-powered{
+    width: 100%;
+}
+
 /*RESPONSIVE 280*/
 @media(max-width: 280px) {
     .header-middle-div{
@@ -618,6 +629,9 @@
         width: 46vw;
         left: 28vw;
         top: 61vh;
+    }
+    .div-powered{
+        display: none;
     }
 }
 
@@ -807,6 +821,9 @@
     .div-panel{
         margin-left: 0px;
     }
+    .div-powered{
+        display: none;
+    }
 }
 
 /*RESPONSIVE 414*/
@@ -964,6 +981,9 @@
         margin-left: 0px;
         margin-top: 40px;
     }
+    .div-powered{
+        display: none;
+    }
 }
 
 @media (min-width: 415px) and (max-width: 540px){
@@ -1052,6 +1072,9 @@
         width: 5vw;
         bottom: 2.5vh;
     }
+    .div-powered{
+        display: none;
+    }
 }
 
 @media (min-width: 541px) and (max-width: 912px){
@@ -1139,6 +1162,28 @@
         left: 58vw;
         width: 5vw;
         bottom: 2.5vh;
+    }
+    .div-powered{
+        display: none;
+    }
+}
+
+@media(min-width: 2500px){
+    .btn-airdrop{
+        top: 51vh;
+    }
+    .img-genesis-mid{
+        width: 15vw;
+    }
+    .img-ship-genesis {
+        left: 52.85vw;
+        width: 37vw;
+        top: 10vh;
+    }
+    .img-ship-genesis-back {
+        left: 50.85vw;
+        width: 40.2vw;
+        top: 13vh;
     }
 }
 
