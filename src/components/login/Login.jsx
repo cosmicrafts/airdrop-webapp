@@ -3,6 +3,7 @@ import { AppContext } from '../../context';
 import { idlFactory } from "../../artAirdropNFTs/artAirdropNFTs.did.js";
 
 import "../css/login.css";
+import "../css/countdown.css";
 import powered from "../../resources/powered.dark.svg";
 import icon from "../../resources/design/logo.svg";
 import plug from "../../resources/design/plug.svg";
@@ -46,6 +47,14 @@ const Login = (props) => {
     const [wallet, setWallet] = useState("");
     const [gen, setGen] = useState(false);
     const [genList, setGenList] = useState([]);
+    const [airdropReady, setAirdropReady] = useState(false);
+    const [timeLeft, setTimeLeft] = useState({
+      days : "00",
+      hours : "00",
+      minutes : "00",
+      seconds : "00",
+      microseconds: "00"
+    });
 
     const connectWallet = async (pWallet) => {
         switch(pWallet) {
@@ -156,6 +165,55 @@ const Login = (props) => {
       window.open("https://discord.gg/cosmicrafts");
     }
 
+    const // countdown
+    setInterval = () => {
+      const now = new Date().getTime();
+      const countDownDate = new Date("May 6, 2022 03:59").getTime();
+      const distance = countDownDate - now;
+      let days = "00";
+      let hours = "00";
+      let minutes = "00";
+      let seconds = "00";
+      let microseconds = "00";
+      if (distance > 0) {
+        days = String((new Date(distance).getDate())-1).padStart(2, "0");
+        hours = String((new Date(distance).getHours())-1).padStart(2, "0");
+        minutes = String(new Date(distance).getMinutes()).padStart(2, "0");
+        seconds = String(new Date(distance).getSeconds()).padStart(2, "0");
+        microseconds = String(new Date(distance).getMilliseconds()).padStart(2, "0");
+      }
+      
+      
+      
+      // percent
+      const daysPerc = Math.floor(100 * days / 31);
+      const hoursPerc = Math.floor(100 * hours / 24);
+      const minutesPerc = Math.floor(100 * minutes / 60);
+      const secondsPerc = Math.floor(100 * seconds / 60);
+      const microsecondsPerc = Math.floor(100 * microseconds / 1000);
+      
+      // svg
+      setTimeLeft({
+        days : days,
+        hours : hours,
+        minutes : minutes,
+        seconds : seconds,
+        microseconds: microsecondsPerc
+      });
+      document.getElementsByClassName('days-perc')[0].style.strokeDashoffset         = daysPerc         * 3.14;
+      document.getElementsByClassName('hours-perc')[0].style.strokeDashoffset        = hoursPerc        * 3.14;
+      document.getElementsByClassName('minutes-perc')[0].style.strokeDashoffset      = minutesPerc      * 3.14;
+      document.getElementsByClassName('seconds-perc')[0].style.strokeDashoffset      = secondsPerc      * 3.14;
+      document.getElementsByClassName('microseconds-perc')[0].style.strokeDashoffset = microsecondsPerc * 3.14;
+      setTimeout(()=>{
+        setInterval();
+      }, 1);
+    };
+
+    useEffect(() => {
+      setInterval();
+    }, []);
+
 
     return (
       <div className='main-div'>
@@ -261,49 +319,106 @@ const Login = (props) => {
             <div className='div-panel'>
               <img src={background} alt='panel' className='img-panel' />
               <img src={icon} alt='Cosmicrafts icon' className='img-icon' />
-              <img src={ic} alt='Cosmicrafts icon' className='img-icon-ic' />
-              <div className='div-text-login'>
-                <label className='text-login'>CONNECT YOUR<br/>WALLET</label>
-              </div>
-              <div className='div-inner-panel'>
-                <div className='div-wallet div-plug'>
-                  <div className='img-bkg' onClick={() => { connectWallet("plug"); }}>
-                    <img src={plug} alt='Plug wallet' className='img-plug' />
-                    <label className='txt-wallet'>Plug Wallet</label>
+              {
+                airdropReady === true ?
+                <>
+                  <img src={ic} alt='Cosmicrafts icon' className='img-icon-ic' />
+                  <div className='div-text-login'>
+                    <label className='text-login'>CONNECT YOUR<br/>WALLET</label>
                   </div>
-                </div>
-                <div className='div-wallet div-stoic'>
-                  <div className='img-bkg' onClick={() => { connectWallet("stoic"); }}>
-                    <img src={stoic} alt='Plug wallet' className='img-stoic' />
-                    <label className='txt-wallet'>Stoic Wallet</label>
+                  <div className='div-inner-panel'>
+                    <div className='div-wallet div-plug'>
+                      <div className='img-bkg' onClick={() => { connectWallet("plug"); }}>
+                        <img src={plug} alt='Plug wallet' className='img-plug' />
+                        <label className='txt-wallet'>Plug Wallet</label>
+                      </div>
+                    </div>
+                    <div className='div-wallet div-stoic'>
+                      <div className='img-bkg' onClick={() => { connectWallet("stoic"); }}>
+                        <img src={stoic} alt='Plug wallet' className='img-stoic' />
+                        <label className='txt-wallet'>Stoic Wallet</label>
+                      </div>
+                    </div>
+                    <div className='div-wallet div-earth'>
+                      <div className='img-bkg' onClick={() => { connectWallet("earth"); }}>
+                        <img src={earth} alt='Plug wallet' className='img-earth' />
+                        <label className='txt-wallet'>Earth Wallet</label>
+                      </div>
+                    </div>
+                    <div className='div-wallet div-ic'>
+                      <div className='img-bkg' onClick={() => { connectWallet("InternetIdentity"); }}>
+                        <img src={ic} alt='Plug wallet' className='img-ic' />
+                        <label className='txt-wallet'>Internet Identity</label>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className='div-wallet div-earth'>
-                  <div className='img-bkg' onClick={() => { connectWallet("earth"); }}>
-                    <img src={earth} alt='Plug wallet' className='img-earth' />
-                    <label className='txt-wallet'>Earth Wallet</label>
+                  <div className='div-airdrop'>
+                    <label className='txt-airdrop'>AIRDROP</label>
                   </div>
-                </div>
-                <div className='div-wallet div-ic'>
-                  <div className='img-bkg' onClick={() => { connectWallet("InternetIdentity"); }}>
-                    <img src={ic} alt='Plug wallet' className='img-ic' />
-                    <label className='txt-wallet'>Internet Identity</label>
+                  <div className='div-condition'>
+                    <label className='txt-condition'>NOTE: ONLY PRE-REGISTERED WALLETS<br/>CAN PARTICIPATE IN AIRDROPS</label>
                   </div>
-                </div>
+                </>
+                :
+                <>
+                  <div className="progress-wrapper">
+                    <div className="days-progress">
+                      <h2 className='days-val-num'>{timeLeft.days}</h2>
+                      <svg className="days-svg" width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="4.25vh" fill="none" stroke="#f738fb" strokeWidth="3" />
+                        <circle className="days-perc" cx="60" cy="60" r="4.25vh" fill="none" stroke="LightGrey" strokeWidth="3" />
+                      </svg>
+                      <h3 className='days-val'>DAYS</h3>
+                    </div>
+                    <div className="hours-progress">
+                      <h2 className='hours-val-num'>{timeLeft.hours}</h2>
+                      <svg className="hours-svg" width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="4.25vh" fill="none" stroke="#f738fb" strokeWidth="3" />
+                        <circle className="hours-perc" cx="60" cy="60" r="4.25vh" fill="none" stroke="LightGrey" strokeWidth="3" />
+                      </svg>
+                      <h3 className='hours-val'>HOURS</h3>
+                    </div>
+                  </div>
+                  <div className="progress-wrapper-2">
+                    <div className="minutes-progress">
+                      <h2 className='minutes-val-num'>{timeLeft.minutes}</h2>
+                      <svg className="minutes-svg" width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="4.25vh" fill="none" stroke="#f738fb" strokeWidth="3" />
+                        <circle className="minutes-perc" cx="60" cy="60" r="4.25vh" fill="none" stroke="LightGrey" strokeWidth="3" />
+                      </svg>
+                      <h3 className='minutes-val'>MINUTES</h3>
+                    </div>
+                    <div className="seconds-progress">
+                      <h2 className='seconds-val-num'>{timeLeft.seconds}</h2>
+                      <svg className="seconds-svg" width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="4.25vh" fill="none" stroke="#f738fb" strokeWidth="3" />
+                        <circle className="seconds-perc" cx="60" cy="60" r="4.25vh" fill="none" stroke="LightGrey" strokeWidth="3" />
+                      </svg>
+                      <h3 className='seconds-val'>SECONDS</h3>
+                    </div>
+                  </div>
+                  <div className="progress-wrapper-3">
+                    <div className="microseconds-progress">
+                      <h2 className='microseconds-val-num'>{timeLeft.microseconds}</h2>
+                      <svg className="microseconds-svg" width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="4.25vh" fill="none" stroke="#f738fb" strokeWidth="3" />
+                        <circle className="microseconds-perc" cx="60" cy="60" r="4.25vh" fill="none" stroke="LightGrey" strokeWidth="3" />
+                      </svg>
+                      <h3 className='microseconds-val'>MICROSEC</h3>
+                    </div>
+                  </div>
+                  <div className='div-airdrop'>
+                    <label className='txt-airdrop'>AIRDROP</label>
+                  </div>
+                </>
+              }
               </div>
-              <div className='div-airdrop'>
-                <label className='txt-airdrop'>AIRDROP</label>
+              <div className='div-left-background'>
+                <img src={leftbackground} className='img-left-background' />
               </div>
-              <div className='div-condition'>
-                <label className='txt-condition'>NOTE: ONLY PRE-REGISTERED WALLETS<br/>CAN PARTICIPATE IN AIRDROPS</label>
+              <div className='div-right-background'>
+                <img src={rightbackground} className='img-right-background' />
               </div>
-            </div>
-            <div className='div-left-background'>
-              <img src={leftbackground} className='img-left-background' />
-            </div>
-            <div className='div-right-background'>
-              <img src={rightbackground} className='img-right-background' />
-            </div>
           </div>
         }
         <div className='join-discord-div' onClick={() => { goToDiscord(); }}>
