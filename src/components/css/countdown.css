@@ -140,3 +140,18 @@
         top: 53vh;
     } 
   }
+
+  @media (min-width: 541px) and (max-width: 912px){
+    .progress-wrapper{
+        left: 23vw;
+        top: 26.5vh;
+    } 
+    .progress-wrapper-2{
+        left: 23vw;
+        top: 41vh;
+    }
+    .progress-wrapper-3{
+        left: 30vw;
+        top: 55vh;
+    } 
+  }
