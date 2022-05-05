@@ -118,6 +118,7 @@ const Login = (props) => {
     };
 
     const saveLoggedData = async (_w, _c) => {
+      console.log(_w);
       let _d = await artAirdropNFTs.getData(_w);
       console.log("DATA FROM IC", _d);
       setWallet(_w);
@@ -181,6 +182,8 @@ const Login = (props) => {
         minutes = String(new Date(distance).getMinutes()).padStart(2, "0");
         seconds = String(new Date(distance).getSeconds()).padStart(2, "0");
         microseconds = String(new Date(distance).getMilliseconds()).padStart(2, "0");
+      } else {
+        setAirdropReady(true);
       }
       
       
@@ -205,9 +208,11 @@ const Login = (props) => {
       document.getElementsByClassName('minutes-perc')[0].style.strokeDashoffset      = minutesPerc      * 3.14;
       document.getElementsByClassName('seconds-perc')[0].style.strokeDashoffset      = secondsPerc      * 3.14;
       document.getElementsByClassName('microseconds-perc')[0].style.strokeDashoffset = microsecondsPerc * 3.14;
-      setTimeout(()=>{
-        setInterval();
-      }, 1);
+      if(distance > 0){
+        setTimeout(()=>{
+          setInterval();
+        }, 1);
+      }
     };
 
     useEffect(() => {
@@ -368,7 +373,7 @@ const Login = (props) => {
                         <circle cx="60" cy="60" r="4.25vh" fill="none" stroke="#f738fb" strokeWidth="3" />
                         <circle className="days-perc" cx="60" cy="60" r="4.25vh" fill="none" stroke="LightGrey" strokeWidth="3" />
                       </svg>
-                      <h3 className='days-val'>DAYS</h3>
+                      <h3 className='days-val' onClick={() => {setAirdropReady(true);}}>DAYS</h3>
                     </div>
                     <div className="hours-progress">
                       <h2 className='hours-val-num'>{timeLeft.hours}</h2>
