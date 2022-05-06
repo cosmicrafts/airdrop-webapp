@@ -177,11 +177,14 @@ const Login = (props) => {
       let seconds = "00";
       let microseconds = "00";
       if (distance > 0) {
+        setAirdropReady(true);
+        /*
         days = String((new Date(distance).getDate())-1).padStart(2, "0");
         hours = String((new Date(distance).getHours())-1).padStart(2, "0");
         minutes = String(new Date(distance).getMinutes()).padStart(2, "0");
         seconds = String(new Date(distance).getSeconds()).padStart(2, "0");
         microseconds = String(new Date(distance).getMilliseconds()).padStart(2, "0");
+        */
       } else {
         setAirdropReady(true);
       }
@@ -216,7 +219,8 @@ const Login = (props) => {
     };
 
     useEffect(() => {
-      setInterval();
+      setAirdropReady(true);
+      //setInterval();
     }, []);
 
 
