@@ -47,7 +47,7 @@ const Login = (props) => {
     const [wallet, setWallet] = useState("");
     const [gen, setGen] = useState(false);
     const [genList, setGenList] = useState([]);
-    const [airdropReady, setAirdropReady] = useState(false);
+    const [airdropReady, setAirdropReady] = useState(true);
     const [timeLeft, setTimeLeft] = useState({
       days : "00",
       hours : "00",
